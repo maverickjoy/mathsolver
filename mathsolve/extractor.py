@@ -9,23 +9,32 @@ def _extractGroups(sentence):
     sentence = sentence.lower()  # converting input to lowercase
     split_words = sentence.strip().split()  # strip extra spaces and split sentence into words
     andCount = 0
-    evenAndFlag = False
+    andFlag = False
     lastNumberWord = -1
     group = []
     groupPos = []
+    scaleMultiplierForPresentGroupPresent = False
     for idx, word in enumerate(split_words):
         if word == 'and':
             andCount += 1
             if andCount % 2 == 0:
-                evenAndFlag = True
-        if word in math_thesaurus.NON_SEPERATORS and not evenAndFlag:
+                andFlag = True
+            # if and comes without a SCALE Multiplier it is a seperator hence make it even say 2
+            if not scaleMultiplierForPresentGroupPresent:
+                andCount = 2
+                andFlag = True
+
+        if word in math_thesaurus.NON_SEPERATORS and not andFlag:
             if len(group) == 0:
                 groupPos.append(idx)
+            if word in math_thesaurus.SCALES:
+                scaleMultiplierForPresentGroupPresent = True
             group.append(word)
             lastNumberWord = idx
         else:
-            if evenAndFlag:
-                evenAndFlag = False
+            scaleMultiplierForPresentGroupPresent = False
+            if andFlag:
+                andFlag = False
             if len(group) > 0:
                 groups.append(group)
                 groupPos.append(lastNumberWord)
@@ -142,6 +151,10 @@ def _extractNumber(wordList):
 
 def replaceAlphabeticalNumbers(sentence):
     groups, groupsPos = _extractGroups(sentence)
+
+    if len(groups) == 0:
+        return sentence
+
     split_words = sentence.strip().split()  # strip extra spaces and split sentence into words
     numbers = []
     for group in groups:
@@ -163,4 +176,6 @@ def replaceAlphabeticalNumbers(sentence):
 
 
 if __name__ == "__main__":
+    print replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six")
+    print replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six hundred and six")
     print replaceAlphabeticalNumbers("what is five hundred divided by forty five point six seven when added with three hundred and forty two")
