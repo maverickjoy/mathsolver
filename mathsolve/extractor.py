@@ -159,7 +159,7 @@ def replaceAlphabeticalNumbers(sentence):
                 numberCnt += 1
         else:
             replaceList.append(word)
-    return ' '.join(replaceList)
+    return (True, ' '.join(replaceList))
 
 
 if __name__ == "__main__":
