@@ -47,7 +47,7 @@ mathsolve.solve("What will be the division of five hundred and seven and five po
 
 ## License
 
-MIT License 2018 © Vikram Singh and [contributors](https://github.com/maverickjoy/mathsolve/graphs/contributors)
+MIT License 2019 © Vikram Singh and [contributors](https://github.com/maverickjoy/mathsolve/graphs/contributors)
 
 [mit-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://opensource.org/licenses/MIT
