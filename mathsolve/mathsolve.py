@@ -25,7 +25,7 @@ def solve(sentence):
     if not res[0]:
         return (False, res[1], 0)
 
-    mathString = res[1]
+    mathString = res[1].lower()
     operands = [float(s) for s in re.findall(r'-?\d+\.?\d*', mathString)]
     operators = _extractOperators(mathString)
     # print operators
