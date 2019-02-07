@@ -98,6 +98,7 @@ if __name__ == "__main__":
     print solve("What is sum of 5 and 6")
     print solve("What is multiplication of 5 and seven")
     print solve("What is division of five hundred and seven and five")
+    print solve("what will be result of when 11 is multiplied with seven")
     print solve("What is sum of five hundred and seven and five and six hundred and six")
     while True:
         sentence = raw_input("Please enter a sentence : ")

@@ -9,7 +9,7 @@ UNARY_OPERATORS =  ['square', 'cube', 'sqrt', 'log']
 # Operator Synonyms
 OPERATOR_SYNONYMS = {
     '^'      : ["power", '^'],
-    '*'      : ["multiply", "multiplication", "multiple", "multiplying", "*"],
+    '*'      : ["multiply", "multiplication", "multiple", "multiplying", "multiplied", "*"],
     '/'      : ["divide", "division", "dividing", "/"],
     '+'      : ["sum", "add", "addition", "summing", "plus", "summision", "+"],
     '-'      : ["minus", "negation", "negating", "subtract", "subtraction", "-"],
