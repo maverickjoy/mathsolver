@@ -153,7 +153,7 @@ def replaceAlphabeticalNumbers(sentence):
     groups, groupsPos = _extractGroups(sentence)
 
     if len(groups) == 0:
-        return sentence
+        return (True, sentence)
 
     split_words = sentence.strip().split()  # strip extra spaces and split sentence into words
     numbers = []
@@ -176,6 +176,11 @@ def replaceAlphabeticalNumbers(sentence):
 
 
 if __name__ == "__main__":
+    print replaceAlphabeticalNumbers("What is sum of 5 and 6")
+    print replaceAlphabeticalNumbers("What is sum of 5 and seven")
     print replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six")
     print replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six hundred and six")
     print replaceAlphabeticalNumbers("what is five hundred divided by forty five point six seven when added with three hundred and forty two")
+    while True:
+        sentence = raw_input("Please enter a sentence : ")
+        print solve(sentence)

@@ -1,22 +1,24 @@
 import math
 
-
-'''
-import re
->>> str = "h3110 23 cat 444.4 rabbit 11 -2 dog"
->>> [float(s) for s in re.findall(r'-?\d+\.?\d*', str)]
-
-'''
-
 # Opperations related to these operators only possible
-BINARY_OPERATORS = {
-    '^', '*', '/', '+', '-'
-}
+BINARY_OPERATORS = [ '^', '*', '/', '+', '-']
 
 # Opperations related to these operators only possible but only one operand needed
-UNARY_OPERATORS =  {
-    'square', 'cube', 'sqrt', 'log'
+UNARY_OPERATORS =  ['square', 'cube', 'sqrt', 'log']
+
+# Operator Synonyms
+OPERATOR_SYNONYMS = {
+    '^'      : ["power", '^'],
+    '*'      : ["multiply", "multiplication", "multiple", "multiplying", "*"],
+    '/'      : ["divide", "division", "dividing", "/"],
+    '+'      : ["sum", "add", "addition", "summing", "plus", "summision", "+"],
+    '-'      : ["minus", "negation", "negating", "subtract", "subtraction", "-"],
+    'square' : ["square", "squaring", "power of 2", "multiplied by itself"],
+    'cube'   : ["cube", "cubing", "power of 3", "multiplied by itself three times"],
+    'sqrt'   : ["square root", "squareroot", "sqrt"],
+    'log'    : ["log", "logarithm"]
 }
+
 
 
 NUMBER_SYSTEM = {
