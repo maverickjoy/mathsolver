@@ -10,9 +10,9 @@ UNARY_OPERATORS =  ['square', 'cube', 'sqrt', 'log']
 OPERATOR_SYNONYMS = {
     '^'      : ["power", '^'],
     '*'      : ["multiply", "multiplication", "multiple", "multiplying", "multiplied", "*"],
-    '/'      : ["divide", "division", "dividing", "/"],
-    '+'      : ["sum", "add", "addition", "summing", "plus", "summision", "+"],
-    '-'      : ["minus", "negation", "negating", "subtract", "subtraction", "-"],
+    '/'      : ["divide", "division", "dividing", "divided", "/"],
+    '+'      : ["sum", "add", "addition", "summing", "plus", "summision", "added", "+"],
+    '-'      : ["minus", "negation", "negating", "subtract", "subtraction", "subtracted", "-"],
     'square' : ["square", "squaring", "power of 2", "multiplied by itself"],
     'cube'   : ["cube", "cubing", "power of 3", "multiplied by itself three times"],
     'sqrt'   : ["square root", "squareroot", "sqrt"],
