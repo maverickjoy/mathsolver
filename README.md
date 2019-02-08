@@ -1,4 +1,4 @@
-# mathsolve
+# mathsolver
 
 [![MIT][mit-image]][mit-url] [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
@@ -19,24 +19,24 @@ For now it supports following operators:
 I would highly recommend using python virtual environment for installing dependencies and programming. For installation of python virtual environment one can follow the [guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
 
 ```bash
-pip install mathsolve
+pip install mathsolver
 ```
 
 ## Usage
 
 ```python
 
-from mathsolve import mathsolve
+from mathsolver import mathsolver
 
 
-mathsolve.solve("What is sum of 5 and 6")
+mathsolver.solve("What is sum of 5 and 6")
 >>> (True, 'Sum of numbers is 11.0', 11.0)
 # Result is a Tuple(status, description, value)
 
-mathsolve.solve("what will be result of when 11 is multiplied with seven")
+mathsolver.solve("what will be result of when 11 is multiplied with seven")
 >>> (True, 'Multiplication of 11.0 and 7.0 is 77.0', 77.0)
 
-mathsolve.solve("What will be the division of five hundred and seven and five point six seven")
+mathsolver.solve("What will be the division of five hundred and seven and five point six seven")
 >>> (True, 'Division of 507.0 and 5.67 is 89.417989418', 89.41798941798942)
 
 ```
@@ -47,7 +47,7 @@ mathsolve.solve("What will be the division of five hundred and seven and five po
 
 ## License
 
-MIT License 2019 © Vikram Singh and [contributors](https://github.com/maverickjoy/mathsolve/graphs/contributors)
+MIT License 2019 © Vikram Singh and [contributors](https://github.com/maverickjoy/mathsolver/graphs/contributors)
 
 [mit-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://opensource.org/licenses/MIT
