@@ -2,17 +2,17 @@ from setuptools import setup
 
 
 # Dynamically retrieve the information
-MATHSOLVE = __import__('mathsolve')
-VERSION = MATHSOLVE.__version__
-AUTHOR = MATHSOLVE.__author__
-AUTHOR_EMAIL = MATHSOLVE.__email__
-URL = MATHSOLVE.__url__
+MATHSOLVER = __import__('mathsolverr')
+VERSION = MATHSOLVER.__version__
+AUTHOR = MATHSOLVER.__author__
+AUTHOR_EMAIL = MATHSOLVER.__email__
+URL = MATHSOLVER.__url__
 
 with open("README.md", "r") as f:
     long_description = f.read()
 
 setup (
-    name='mathsolve',
+    name='mathsolver',
     version=VERSION,
     url=URL,
     author=AUTHOR,
@@ -20,8 +20,8 @@ setup (
     description='Decode natural language to solve mathemathical calculations',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=["mathsolve"],
-    package_dir={'mathsolve':'mathsolve'},
+    packages=["mathsolver"],
+    package_dir={'mathsolver':'mathsolver'},
     license='MIT',
     classifiers=[
             'Development Status :: 4 - Beta',
