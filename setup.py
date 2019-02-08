@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 # Dynamically retrieve the information
-MATHSOLVER = __import__('mathsolverr')
+MATHSOLVER = __import__('mathsolver')
 VERSION = MATHSOLVER.__version__
 AUTHOR = MATHSOLVER.__author__
 AUTHOR_EMAIL = MATHSOLVER.__email__
