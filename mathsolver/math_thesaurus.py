@@ -4,7 +4,7 @@ import math
 BINARY_OPERATORS = [ '^', '*', '/', '+', '-']
 
 # Opperations related to these operators only possible but only one operand needed
-UNARY_OPERATORS =  ['square', 'cube', 'sqrt', 'log']
+UNARY_OPERATORS =  ['sqrt', 'cube', 'square', 'log']
 
 # Operator Synonyms
 OPERATOR_SYNONYMS = {
